@@ -1,0 +1,30 @@
+{
+  "name": "h5p-editor-copyright",
+  "version": "1.0.0",
+  "description": "An H5P widget that adds a copyright button to a H5P form",
+  "main": "h5p-editor-copyright.js",
+  "scripts": {
+    "start": "vite build --mode=development --watch --minify=false",
+    "build": "tsc --noEmit && vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NDLA-H5P/h5p-editor-copyright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NDLA-H5P/h5p-editor-copyright/issues"
+  },
+  "homepage": "https://github.com/NDLA-H5P/h5p-editor-copyright#readme",
+  "devDependencies": {
+    "@tsconfig/strictest": "^1.0.0",
+    "@types/node": "^17.0.23",
+    "h5p-types": "github:boyum/h5p-types",
+    "vite": "^2.8.6"
+  },
+  "dependencies": {
+    "h5p-utils": "github:boyum/h5p-utils"
+  }
+}

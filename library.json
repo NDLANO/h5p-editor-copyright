@@ -1,0 +1,13 @@
+{
+  "title": "Copyright widget",
+  "machineName": "H5PEditor.Copyright",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "runnable": 0,
+  "preloadedJs": [
+    {
+      "path": "h5p-editor-copyright.js"
+    }
+  ]
+}
