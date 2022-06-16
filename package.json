@@ -20,7 +20,7 @@
   "homepage": "https://github.com/NDLA-H5P/h5p-editor-copyright#readme",
   "devDependencies": {
     "@tsconfig/strictest": "^1.0.0",
-    "@types/node": "^17.0.23",
+    "@types/node": "^17.0.44",
     "h5p-types": "github:boyum/h5p-types",
     "vite": "^2.8.6"
   },
