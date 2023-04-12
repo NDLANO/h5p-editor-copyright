@@ -31,15 +31,17 @@ export default defineConfig({
     rollupOptions: {
       input: "src/h5p-editor-copyright.ts",
       output: {
-        file: "h5p-editor-copyright.js",
-        dir: null,
+        dir: "dist",
         inlineDynamicImports: true,
-        manualChunks: null,
+        manualChunks: undefined,
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === "index.css") {
             return "main.css";
           }
-          return assetInfo.name;
+          return assetInfo.name ?? "";
+        },
+        entryFileNames: () => {
+          return "bundle.js"; // See comment above
         },
       },
     },
