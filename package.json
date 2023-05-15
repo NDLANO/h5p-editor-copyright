@@ -4,8 +4,8 @@
   "description": "An H5P widget that adds a copyright button to a H5P form",
   "main": "h5p-editor-copyright.js",
   "scripts": {
-    "start": "vite build --mode=development --watch --minify=false",
-    "build": "tsc --noEmit && vite build"
+    "watch": "webpack --mode development --watch --devtool eval-source-map",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,10 @@
     "@tsconfig/strictest": "^2.0.0",
     "@types/node": "^18.15.11",
     "h5p-types": "github:boyum/h5p-types",
+    "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
-    "vite": "^4.2.1"
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
   },
   "dependencies": {
     "h5p-utils": "github:boyum/h5p-utils"
