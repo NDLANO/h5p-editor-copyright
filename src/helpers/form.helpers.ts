@@ -1,15 +1,15 @@
 import type {
-  Copyright,
+  H5PCopyright,
   H5PField,
   H5PFieldGroup,
   H5PFieldSelect,
   H5PFieldText,
 } from 'h5p-types';
-import { H5P, H5PEditor } from 'h5p-utils/src/utils/H5P.utils';
 import type { Params } from '../h5p-editor-copyright';
 import { H5PEditorDialog } from '../h5p-editor-dialog';
+import { H5P, H5PEditor } from 'h5p-utils';
 
-export const emptyCopyright: Copyright = {
+export const emptyCopyright: H5PCopyright = {
   author: '',
   license: '',
   source: '',
