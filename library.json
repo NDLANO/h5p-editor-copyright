@@ -8,7 +8,7 @@
   "license": "MIT",
   "preloadedJs": [
     {
-      "path": "h5p-editor-copyright.js"
+      "path": "dist/h5p-editor-copyright.js"
     }
   ]
 }
