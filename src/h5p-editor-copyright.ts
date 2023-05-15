@@ -1,6 +1,5 @@
 import type { Copyright, H5PFieldGroup, IH5PWidget } from 'h5p-types';
-import { H5PWidget } from 'h5p-utils/src/models/H5PWidget';
-import { H5PEditor } from 'h5p-utils/src/utils/H5P.utils';
+import { H5PEditor, H5PWidget } from 'h5p-utils';
 import { createCopyrightHTML } from './helpers/form.helpers';
 
 const widgetName = 'copyright';
