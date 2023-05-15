@@ -5,6 +5,7 @@
   "minorVersion": 0,
   "patchVersion": 1,
   "runnable": 0,
+  "license": "MIT",
   "preloadedJs": [
     {
       "path": "h5p-editor-copyright.js"
