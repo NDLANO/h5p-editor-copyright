@@ -1,11 +1,11 @@
-import type { Copyright, H5PFieldGroup, IH5PWidget } from 'h5p-types';
+import type { H5PFieldGroup, IH5PWidget, H5PCopyright } from 'h5p-types';
 import { H5PEditor, H5PWidget } from 'h5p-utils';
 import { createCopyrightHTML } from './helpers/form.helpers';
 
 const widgetName = 'copyright';
 
 type Field = H5PFieldGroup;
-export type Params = Copyright | undefined;
+export type Params = H5PCopyright | undefined;
 
 class CopyrightWidget extends H5PWidget<Field, Params> implements IH5PWidget {
   appendTo($containerElement: JQuery<HTMLDivElement>) {
