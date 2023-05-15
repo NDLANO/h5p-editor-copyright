@@ -1,14 +1,14 @@
-import type { OutputAsset, OutputChunk } from "rollup";
-import { defineConfig, PluginOption } from "vite";
+import type { OutputAsset, OutputChunk } from 'rollup';
+import { defineConfig, PluginOption } from 'vite';
 
 const isOutputChunk = (
   chunkOrAsset: OutputChunk | OutputAsset
 ): chunkOrAsset is OutputChunk => {
-  return chunkOrAsset["code"] != null;
+  return chunkOrAsset['code'] != null;
 };
 
 const wrapIIFE = (): PluginOption => ({
-  name: "wrap-iife",
+  name: 'wrap-iife',
   generateBundle(options, bundle) {
     const chunks = Object.values(bundle);
 
@@ -26,26 +26,26 @@ const wrapIIFE = (): PluginOption => ({
 export default defineConfig({
   plugins: [wrapIIFE()],
   build: {
-    minify: "esbuild",
+    minify: 'esbuild',
 
     rollupOptions: {
-      input: "src/h5p-editor-copyright.ts",
+      input: 'src/h5p-editor-copyright.ts',
       output: {
-        dir: "dist",
+        dir: 'dist',
         inlineDynamicImports: true,
         manualChunks: undefined,
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === "index.css") {
-            return "main.css";
+          if (assetInfo.name === 'index.css') {
+            return 'main.css';
           }
-          return assetInfo.name ?? "";
+          return assetInfo.name ?? '';
         },
         entryFileNames: () => {
-          return "bundle.js"; // See comment above
+          return 'bundle.js'; // See comment above
         },
       },
     },
 
-    target: "es2015",
+    target: 'es2015',
   },
 });

@@ -1,9 +1,9 @@
-import type { Copyright, H5PFieldGroup, IH5PWidget } from "h5p-types";
-import { H5PWidget } from "h5p-utils/src/models/H5PWidget";
-import { H5PEditor } from "h5p-utils/src/utils/H5P.utils";
-import { createCopyrightHTML } from "./helpers/form.helpers";
+import type { Copyright, H5PFieldGroup, IH5PWidget } from 'h5p-types';
+import { H5PWidget } from 'h5p-utils/src/models/H5PWidget';
+import { H5PEditor } from 'h5p-utils/src/utils/H5P.utils';
+import { createCopyrightHTML } from './helpers/form.helpers';
 
-const widgetName = "copyright";
+const widgetName = 'copyright';
 
 type Field = H5PFieldGroup;
 export type Params = Copyright | undefined;
@@ -12,7 +12,7 @@ class CopyrightWidget extends H5PWidget<Field, Params> implements IH5PWidget {
   appendTo($containerElement: JQuery<HTMLDivElement>) {
     const { field, setValue } = this;
 
-    const isGroupField = field.type === "group";
+    const isGroupField = field.type === 'group';
     if (!isGroupField) {
       console.warn(
         `The field \`${field.name}\` has the widget \`${widgetName}\` set, but is of type \`${field.type}\`, not \`group\``
@@ -22,7 +22,7 @@ class CopyrightWidget extends H5PWidget<Field, Params> implements IH5PWidget {
     const container = $containerElement.get(0);
 
     if (!container) {
-      throw new Error("No container element to append CopyrightWrapper to");
+      throw new Error('No container element to append CopyrightWrapper to');
     }
 
     this.wrapper.appendChild(
