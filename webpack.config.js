@@ -4,7 +4,7 @@ module.exports = {
   mode: 'production',
   entry: './src/h5p-editor-copyright.ts',
   output: {
-    filename: 'bundle.js',
+    filename: 'h5p-editor-copyright.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
