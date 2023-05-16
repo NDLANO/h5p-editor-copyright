@@ -4,8 +4,10 @@
   "description": "An H5P widget that adds a copyright button to a H5P form",
   "main": "h5p-editor-copyright.js",
   "scripts": {
-    "start": "vite build --mode=development --watch --minify=false",
-    "build": "tsc --noEmit && vite build"
+    "watch": "webpack --mode development --watch --devtool eval-source-map",
+    "build": "webpack --mode production",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -19,13 +21,18 @@
   },
   "homepage": "https://github.com/NDLA-H5P/h5p-editor-copyright#readme",
   "devDependencies": {
-    "@tsconfig/strictest": "^2.0.0",
-    "@types/node": "^18.15.11",
-    "h5p-types": "github:boyum/h5p-types",
+    "@tsconfig/strictest": "^2.0.1",
+    "@types/node": "^20.1.5",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
+    "eslint-config-ndla-h5p": "github:NDLANO/eslint-config-ndla-h5p",
+    "h5p-types": "^1.18.0",
+    "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
-    "vite": "^4.2.1"
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
   },
   "dependencies": {
-    "h5p-utils": "github:boyum/h5p-utils"
+    "h5p-utils": "^3.2.1"
   }
 }

@@ -10,6 +10,7 @@ src
 .babelrc
 .gitmodules
 .eslintrc
+.eslintrc.json
 .h5pignore
 .travis.yml
 karma.conf.js
@@ -20,4 +21,3 @@ CONTRIBUTING.md
 package.json
 package-lock.json
 worknotes
-LICENSE
