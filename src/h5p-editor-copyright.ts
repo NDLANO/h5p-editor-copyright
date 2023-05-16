@@ -1,5 +1,5 @@
-import type { H5PFieldGroup, IH5PWidget, H5PCopyright } from 'h5p-types';
-import { H5PEditor, H5PWidget } from 'h5p-utils';
+import type { H5PCopyright, H5PFieldGroup, IH5PWidget } from 'h5p-types';
+import { H5PWidget, registerWidget } from 'h5p-utils';
 import { createCopyrightHTML } from './helpers/form.helpers';
 
 const widgetName = 'copyright';
@@ -40,5 +40,4 @@ class CopyrightWidget extends H5PWidget<Field, Params> implements IH5PWidget {
   remove() {}
 }
 
-(H5PEditor as any).Copyright = CopyrightWidget;
-(H5PEditor as any).widgets[widgetName] = CopyrightWidget;
+registerWidget('Copyright', widgetName, CopyrightWidget);
