@@ -1,11 +1,31 @@
 const path = require('path');
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+const TerserPlugin = require('terser-webpack-plugin'); // Supplied by webpack
+
+const mode = process.argv.includes('--mode=production') ?
+  'production' : 'development';
+const libraryName = process.env.npm_package_name;
+
 module.exports = {
-  mode: 'production',
-  entry: './src/h5p-editor-copyright.ts',
+  mode: mode,
+  optimization: {
+    minimize: mode === 'production',
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          }
+        }
+      })
+    ]
+  },
+  entry: `./src/${libraryName}.ts`,
   output: {
-    filename: 'h5p-editor-copyright.js',
+    filename: `${libraryName}.js`,
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   module: {
     rules: [
@@ -21,7 +41,12 @@ module.exports = {
       },
     ],
   },
+  target: ['browserslist'],
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
+  stats: {
+    colors: true
+  },
+  ...(mode !== 'production' && { devtool: 'eval-cheap-module-source-map' })
 };

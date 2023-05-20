@@ -4,35 +4,36 @@
   "description": "An H5P widget that adds a copyright button to a H5P form",
   "main": "h5p-editor-copyright.js",
   "scripts": {
-    "watch": "webpack --mode development --watch --devtool eval-source-map",
-    "build": "webpack --mode production",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "watch": "webpack --mode=development --watch",
+    "build": "webpack --mode=production",
+    "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NDLA-H5P/h5p-editor-copyright.git"
+    "url": "git+https://github.com/NDLANO/h5p-editor-copyright.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NDLA-H5P/h5p-editor-copyright/issues"
+    "url": "https://github.com/NDLANO/h5p-editor-copyright/issues"
   },
-  "homepage": "https://github.com/NDLA-H5P/h5p-editor-copyright#readme",
+  "homepage": "https://github.com/NDLANO/h5p-editor-copyright#readme",
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.1",
-    "@types/node": "^20.1.5",
+    "@types/node": "^20.2.1",
     "@typescript-eslint/parser": "^5.59.6",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "eslint-config-ndla-h5p": "github:NDLANO/eslint-config-ndla-h5p",
-    "h5p-types": "^1.18.0",
+    "h5p-types": "^1.18.1",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
-    "webpack": "^5.82.1",
+    "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1"
   },
   "dependencies": {
     "h5p-utils": "^3.2.1"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
 }

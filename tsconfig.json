@@ -3,7 +3,7 @@
     "downlevelIteration": true,
     "module": "ESNext",
     "moduleResolution": "node",
-    "target": "es2015"
+    "target": "es2020"
   },
   "include": ["./src/**/*"],
   "extends": "@tsconfig/strictest/tsconfig.json"
