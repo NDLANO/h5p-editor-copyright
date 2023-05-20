@@ -1,19 +1,9 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "moduleResolution": "node",
-    "target": "es2015",
-    "allowJs": true,
-    "jsx": "react",
     "downlevelIteration": true,
-    "strictNullChecks": true,
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "es2020"
   },
   "include": ["./src/**/*"],
   "extends": "@tsconfig/strictest/tsconfig.json"

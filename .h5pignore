@@ -10,6 +10,7 @@ src
 .babelrc
 .gitmodules
 .eslintrc
+.eslintrc.json
 .h5pignore
 .travis.yml
 karma.conf.js
